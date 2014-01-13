@@ -28,5 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('pry-debugger')
   s.add_development_dependency('timecop')
   s.add_development_dependency('rake')
-  s.add_development_dependency('rspec', ['>= 2.10.0'])
+  s.add_development_dependency('rspec', ['>= 3.0.0.beta1'])
+  s.add_development_dependency('rspec-collection_matchers', ['~> 0.0.2'])
 end
