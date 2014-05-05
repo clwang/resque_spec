@@ -91,11 +91,11 @@ RSpec::Matchers.define :have_queued do |*expected_args|
     end
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     "expected that #{actual} would have [#{expected_args.join(', ')}] queued#{@times_info}"
   end
 
-  failure_message_for_should_not do |actual|
+  failure_message_when_negated do |actual|
     "expected that #{actual} would not have [#{expected_args.join(', ')}] queued#{@times_info}"
   end
 
@@ -111,11 +111,11 @@ RSpec::Matchers.define :have_queue_size_of do |size|
     queue(actual).size == size
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     "expected that #{actual} would have #{size} entries queued, but got #{queue(actual).size} instead"
   end
 
-  failure_message_for_should_not do |actual|
+  failure_message_when_negated do |actual|
     "expected that #{actual} would not have #{size} entries queued, but got #{queue(actual).size} instead"
   end
 
